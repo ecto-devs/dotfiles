@@ -2,8 +2,8 @@
 # ────────────── Ghostty Configuration ──────────────
 # https://ghostty.org/docs/config.
 
-window-padding-x = 12
-window-padding-y = 12
+window-padding-x = 8
+window-padding-y = 8
 font-size = 11
 background-opacity = 0.90
 background-blur = macos-glass-regular
