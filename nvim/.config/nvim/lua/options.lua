@@ -12,6 +12,7 @@ vim.opt.colorcolumn = ""  -- Disable vertical line
 vim.opt.number = true               -- show absolute number
 vim.opt.relativenumber = true       -- add numbers to each line on the left side
 vim.opt.cursorline = true           -- highlight cursor line underneath the cursor horizontally
+vim.opt.cmdheight = 0               -- set cmd line height to 0 (we are using noice's floating cmd line)
 
 -- Disable cursorline & co in terminal buffers for performance
 vim.api.nvim_create_autocmd("TermOpen", {
