@@ -1,0 +1,51 @@
+// ────────────── Window Rules ──────────────
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules
+
+// Apply to ALL windows
+window-rule {
+    geometry-corner-radius 4 // Set every window radius to 20
+    clip-to-geometry true
+
+}
+
+// Ghostty transparency
+window-rule {
+    match app-id="ghostty"
+    background-effect {
+        blur true
+    }
+}
+
+// Ghostty transparency
+window-rule {
+    match app-id="1password"
+    open-floating true
+}
+
+
+// Firefox Picture-in-Picture
+window-rule {
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    open-floating true
+
+}
+
+// Open steam floating
+window-rule {
+    match app-id="steam"
+    exclude title=r#"^[Ss]team$"#
+    open-floating true
+}
+
+// Steam notifcations floating bottom right
+window-rule {
+   match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
+   default-floating-position x=10 y=10 relative-to="bottom-right"
+   open-focused false
+}
+
+// Noctalia wallpapers
+layer-rule {
+    match namespace="^noctalia-wallpaper*"
+    place-within-backdrop true
+}

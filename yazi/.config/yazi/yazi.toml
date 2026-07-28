@@ -1,0 +1,55 @@
+# yazi.toml
+[mgr]
+show_hidden = true
+
+[preview]
+wrap            = "no"
+tab_size        = 2
+max_width       = 4000    
+max_height      = 4000
+cache_dir       = ""
+image_delay     = 30
+image_filter    = "triangle"
+image_quality   = 50
+ueberzug_scale  = 0.5
+ueberzug_offset = [ 0, 0, 0, 0 ]
+
+[opener]
+edit = [
+	{ run = "${EDITOR:-nvim} %s", desc = "$EDITOR",      for = "unix", block = true },
+	{ run = "code %s",          desc = "code",         for = "windows", orphan = true },
+	{ run = "code -w %s",       desc = "code (block)", for = "windows", block = true },
+]
+
+# Media info previews (image, video, audio metadata below preview)
+[[plugin.prepend_previewers]]
+mime = "image/*"
+run  = "mediainfo"
+
+[[plugin.prepend_previewers]]
+mime = "video/*"
+run  = "mediainfo"
+
+[[plugin.prepend_previewers]]
+mime = "audio/*"
+run  = "mediainfo"
+
+#preview .CSV with bat
+[[plugin.prepend_previewers]]
+url = "*.csv"
+run = 'piper -- bat -p --color=always "$1"'
+
+#preview .MD with glow
+[[plugin.prepend_previewers]]
+url = "*.md"
+run = 'piper -- CLICOLOR_FORCE=1 glow -w=$w -s=dark "$1"'
+
+#preview directories with eza
+[[plugin.prepend_previewers]]
+url = "*/"
+run = 'piper -- eza -TL=3 --color=always --icons=always --group-directories-first --no-quotes "$1"'
+
+#preview sql schema
+[[plugin.prepend_previewers]]
+mime = "application/sqlite3"
+run  = 'piper -- sqlite3 "$1" ".schema --indent"'

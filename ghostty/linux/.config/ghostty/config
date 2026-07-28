@@ -1,0 +1,16 @@
+
+# ────────────── Ghostty Configuration ──────────────
+# https://ghostty.org/docs/config.
+
+window-padding-x = 12
+window-padding-y = 12
+font-size = 11
+background-opacity = 0.90
+background-blur = macos-glass-regular
+confirm-close-surface=false
+copy-on-select=true
+custom-shader=shaders/cursor_warp.glsl
+theme = noctalia
+cursor-style=block
+cursor-style-blink = true
+shell-integration-features = no-cursor

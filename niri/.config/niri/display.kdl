@@ -1,0 +1,34 @@
+// ────────────── Display Output Configuration ──────────────
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Outputs
+
+// Laptop Screen
+output "eDP-1" {
+  mode "1920x1200@60"
+  transform "normal"
+  position x=0 y=0
+  scale 1.50
+}
+
+// // DP-2 Above laptop screen
+// output "DP-2" {
+//   mode "3840x2160@120.000"
+//   transform "normal"
+//   position x=0 y=-1080
+//   scale 2
+// }
+
+// External Monitor (DP-2) — to the right of laptop, center-aligned vertically
+output "DP-2" {
+  mode "3840x2160@120"
+  transform "normal"
+  position x=1280 y=-217
+  scale 1.75
+}
+
+// TV (HDMI-A-1)
+output "HDMI-A-1" {
+  mode "3840x2160@120.000"
+  transform "normal"
+  position x=0 y=-960
+  scale 2.0
+}

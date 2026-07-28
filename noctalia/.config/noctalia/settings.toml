@@ -1,0 +1,26 @@
+config_version = 7
+
+[bar.default]
+center = [ "workspaces" ]
+end = [ "tray", "notifications", "clipboard", "network", "bluetooth", "volume", "brightness", "battery" ]
+font_family = "JetBrainsMono Nerd Font"
+margin_ends = 0
+position = "left"
+radius = 0
+start = [ "clock" ]
+
+[theme.templates]
+builtin_ids = [ "btop", "gtk3", "gtk4", "ghostty", "hyprland", "niri", "qt" ]
+community_ids = [ "pi-agent", "pywalfox", "neovim", "obsidian", "vicinae", "bat", "lazygit", "yazi" ]
+
+[widget.battery]
+show_label = false
+
+[widget.brightness]
+show_label = false
+
+[widget.network]
+show_label = false
+
+[widget.volume]
+show_label = false

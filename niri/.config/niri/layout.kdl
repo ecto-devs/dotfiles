@@ -1,0 +1,49 @@
+// ────────────── Layout Configuration ──────────────
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Layout
+
+layout {
+    gaps 12
+
+    //Allows Noctalia Shell to set wallpaper
+    background-color "transparent" 
+
+    center-focused-column "on-overflow"
+
+    default-column-width { proportion 0.5; }
+
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+	proportion 1.0
+    }
+
+    preset-window-heights {
+	proportion 1.0
+	proportion 0.5
+    }
+
+    focus-ring {
+        width 2
+    }
+
+    border {
+        off
+    }
+
+    shadow {
+        on
+        draw-behind-window true
+        softness 30
+        spread 5
+        offset x=0 y=5
+        color "#0007"
+    }
+
+    struts {
+        left 1
+        right 1
+        top 1
+        bottom 1
+    }
+}
