@@ -6,7 +6,7 @@ output "eDP-1" {
   mode "1920x1200@60"
   transform "normal"
   position x=0 y=0
-  scale 1.50
+  scale 1.33
 }
 
 // // DP-2 Above laptop screen
