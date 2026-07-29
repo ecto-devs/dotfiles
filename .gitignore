@@ -4,5 +4,8 @@ fish_variables
 /nvim/.config/nvim/lua/matugen.lua
 /yazi/.config/yazi/flavors/noctalia.yazi/tmtheme.xml
 /yazi/.config/yazi/flavors/noctalia.yazi/flavor.toml
-*.DS_store*
+**.DS_store**
 /ghostty/.config/ghostty/themes/noctalia
+**/fish/completions**
+**/fish/conf.d**
+**/fish/functions**
