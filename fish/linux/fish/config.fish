@@ -4,6 +4,7 @@ fzf --fish | source
 zoxide init fish | source
 
 # Functions
+### exiting yazi cds to yazi pwd
 function y
 	set tmp (mktemp -t "yazi-cwd.XXXXXX")
 	command yazi $argv --cwd-file="$tmp"
