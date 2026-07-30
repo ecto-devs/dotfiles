@@ -43,6 +43,6 @@ set -gx EDITOR nvim
 set -Ux ROCM_PATH /opt/rocm  # Base install dir for ROCm; other vars reference this
 set -Ux PATH $ROCM_PATH/bin $PATH  # Adds ROCm binariesto your shell command search path
 set -Ux LD_LIBRARY_PATH $ROCM_PATH/lib $ROCM_PATH/lib64 $LD_LIBRARY_PATH  # Tells the dynamic linker where to find ROCm's .so libraries
-
+set -Ux SSH_AUTH_SOCK $XDG_RUNTIME_DIR/ssh-agent.socket
 
 
