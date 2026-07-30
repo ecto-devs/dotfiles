@@ -11,6 +11,7 @@
         QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
         XDG_CURRENT_DESKTOP "niri"
         XDG_SESSION_TYPE "wayland"
+        SSH_AUTH_SOCK "/run/user/1000/ssh-agent.socket"
     }
 
     cursor {
