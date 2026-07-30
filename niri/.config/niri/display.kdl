@@ -21,8 +21,8 @@ output "eDP-1" {
 output "DP-2" {
   mode "3840x2160@120"
   transform "normal"
-  position x=1280 y=-217
-  scale 1.75
+  position x=1440 y=-200
+  scale 1.66
 }
 
 // TV (HDMI-A-1)
