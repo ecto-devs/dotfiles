@@ -9,3 +9,4 @@ fish_variables
 **/fish/completions**
 **/fish/conf.d**
 **/fish/functions**
+**.fish_variables**
