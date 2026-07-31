@@ -27,7 +27,7 @@ vim.opt.splitbelow = true           -- open new vertical split bottom
 vim.opt.splitright = true           -- open new horizontal splits right
 vim.opt.termguicolors = true        -- enable 24-bit RGB color in the TUI
 vim.opt.scrolloff = 8               -- Leave a margin vertically when we scroll
-vim.opt.lazyredraw = true
+vim.opt.lazyredraw = false
 
 -- Tabs
 vim.opt.tabstop = 4                 -- number of visual spaces per TAB
