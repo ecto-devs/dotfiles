@@ -31,8 +31,8 @@ abbr -a -- projects cd ~/Projects
 
 abbr -a -- ts tailscale
 
-abbr -a -- mountshare sudo mount -t cifs -o username=lxc //ecto-rasp/ecto-share /mnt/smb/ecto-share
-abbr -a -- mountsharep sudo mount -t cifs -o username=lxc //ecto-rasp/share_p /mnt/smb/share_p
+# Uncomment and customize CIFS mounts for your setup:
+# abbr -a -- mountshare sudo mount -t cifs -o username=USER //HOSTNAME/SHARE /mnt/smb/SHARE
 
 # Binds
 bind \t accept-autosuggestion
