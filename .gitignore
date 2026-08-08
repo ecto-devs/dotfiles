@@ -11,3 +11,4 @@ fish_variables
 **/fish/conf.d**
 **/fish/functions**
 **fish_variables**
+ /herdr/.config/herdr/plugins/*
