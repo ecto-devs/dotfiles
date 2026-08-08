@@ -8,10 +8,32 @@ onboarding = false
 # onboarding = true
 
 [theme]
+# cendre theme for herdr (https://herdr.dev) · hard
+# https://github.com/Aejkatappaja/cendre
+name = "terminal"   # neutral base; every token below is overridden by cendre
+auto_switch = false
+
+[theme.custom]
+accent      = "#ea9875"
+panel_bg    = "#171311"
+surface0    = "#201b19"
+surface1    = "#2a2422"
+surface_dim = "#0f0c0a"
+overlay0    = "#73665b"
+overlay1    = "#a09384"
+text        = "#e6d5c2"
+subtext0    = "#a09384"
+mauve       = "#d1766e"
+green       = "#99af6b"
+yellow      = "#fcba81"
+red         = "#d25780"
+blue        = "#4e89a2"
+teal        = "#20c9cb"
+peach       = "#ea9875"
+
 # Built-in themes: catppuccin, terminal, tokyo-night, dracula, nord,
 #                  gruvbox, one-dark, solarized, kanagawa, rose-pine,
 #                  vesper
-name = "rose-pine"
 
 # Follow host terminal light/dark appearance and switch Herdr UI themes.
 # Existing manual behavior is unchanged unless this is true.
@@ -21,11 +43,6 @@ name = "rose-pine"
 
 # Override individual color tokens on top of the base theme.
 # Accepts: hex (#rrggbb), named colors, rgb(r,g,b), or panel_bg = "reset"
-# [theme.custom]
-# panel_bg = "reset"
-# accent = "#f5c2e7"
-# red = "#ff6188"
-# green = "#a6e3a1"
 
 [terminal]
 # Executable used for new interactive panes.
