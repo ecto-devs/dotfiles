@@ -1,0 +1,13 @@
+2026-08-08T23:01:46.005396Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=141325
+2026-08-08T23:01:46.005455Z  INFO herdr::client: connecting to server path=/home/lxc/.config/herdr/herdr-client.sock
+2026-08-08T23:01:46.006693Z  INFO herdr::client: handshake succeeded version=17 encoding=SemanticFrame
+2026-08-08T23:21:01.457014Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="client" outcome="completed" pid=141325
+2026-08-08T23:21:03.323368Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=377800
+2026-08-08T23:21:03.323394Z  INFO herdr::client: connecting to server path=/home/lxc/.config/herdr/herdr-client.sock
+2026-08-08T23:21:03.334921Z  INFO herdr::client: handshake succeeded version=17 encoding=SemanticFrame
+2026-08-08T23:23:58.317978Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="client" outcome="completed" pid=377800
+2026-08-08T23:23:59.802181Z  WARN herdr::config::keybinds: config diagnostic empty custom command: keys.command[0].command; disabling custom command
+2026-08-08T23:23:59.802216Z  WARN herdr::config::keybinds: config diagnostic empty custom command: keys.command[1].command; disabling custom command
+2026-08-08T23:23:59.802300Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=414270
+2026-08-08T23:23:59.802308Z  INFO herdr::client: connecting to server path=/home/lxc/.config/herdr/herdr-client.sock
+2026-08-08T23:23:59.808218Z  INFO herdr::client: handshake succeeded version=17 encoding=SemanticFrame

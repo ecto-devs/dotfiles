@@ -14,3 +14,4 @@ fish_variables
 /herdr/.config/herdr/plugins/**
 /herdr/.config/herdr/.plugins.lock
 /herdr/.config/herdr/session.json
+/herdr/.config/herdr/release-notes.json
