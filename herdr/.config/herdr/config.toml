@@ -146,10 +146,18 @@ toggle_sidebar = "prefix+b"
 # width = "80%"
 # height = "80%"
 
-[[keys.command]]
-key = "prefix+shift+e"
-type = "shell"
-command = "./scripts/new-editor-tab.sh"
+
+ [[keys.command]]
+ key = "prefix+up"
+ type = "plugin_action"
+ command = "cloudmanic.herdr-plus.projects"
+ description = "herdr-plus: projects"
+
+ [[keys.command]]
+ key = "prefix+down"
+ type = "plugin_action"
+ command = "cloudmanic.herdr-plus.quick-actions"
+ description = "herdr-plus: quick actions"
 
 # Legacy indexed shortcut config is still parsed for compatibility.
 # Prefer switch_tab, switch_workspace, and focus_agent for new configs.
@@ -159,7 +167,7 @@ command = "./scripts/new-editor-tab.sh"
 # agents = ""     # e.g. "alt" makes alt+1..9 focus agent rows directly
 
 # [worktrees]
-# directory = "~/.herdr/worktrees"
+# directory = "~/.herdr/worktreqs"
 
 [ui]
 # Sidebar width (auto-scaled based on workspace names, this sets the default)
