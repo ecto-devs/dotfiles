@@ -7,7 +7,7 @@ layout {
     //Allows Noctalia Shell to set wallpaper
     background-color "transparent" 
 
-    center-focused-column "on-overflow"
+    center-focused-column "never"
 
     default-column-width { proportion 0.5; }
 
