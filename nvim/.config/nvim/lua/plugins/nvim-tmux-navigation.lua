@@ -1,5 +1,6 @@
 return {
     "alexghergh/nvim-tmux-navigation",
+    cond = vim.env.HERDR_ENV ~= '1',
     config = function()
         local nvim_tmux_nav = require("nvim-tmux-navigation")
         nvim_tmux_nav.setup({ disable_when_zoomed = false })
