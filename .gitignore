@@ -1,21 +1,24 @@
-/nvim/.config/nvim/lazy-lock.json
+# macOS
+.DS_Store
+
+# Fish
 fish_variables
+**/fish/completions**
+**/fish/conf.d**
+**/fish/functions
+
+# Third-party / generated files
+/nvim/.config/nvim/lazy-lock.json
 /niri/.config/niri/noctalia.kdl
 /nvim/.config/nvim/lua/matugen.lua
 /yazi/.config/yazi/flavors/noctalia.yazi/tmtheme.xml
 /yazi/.config/yazi/flavors/noctalia.yazi/flavor.toml
-.DS_Store
-**/.DS_Store
 /ghostty/.config/ghostty/themes/noctalia
-**/fish/completions**
-**/fish/conf.d**
-**/fish/functions**
-**fish_variables**
-/herdr/.config/herdr/plugins/**
+
+# Herdr
+/herdr/.config/herdr/plugins/github/**
 /herdr/.config/herdr/.plugins.lock
 /herdr/.config/herdr/session.json
 /herdr/.config/herdr/release-notes.json
 /herdr/.config/herdr/*.log
 /herdr/.config/herdr/*.sock
-/herdr/.config/herdr/herdr-client.log
-/herdr/.config/herdr/herdr-server.log
