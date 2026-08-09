@@ -1,0 +1,7 @@
+# Dummy quick action — a simple command, run in the directory you launch from.
+# Open via the "Herdr Plus: Quick Actions" action.
+
+name = "Say Hello"
+description = "Print a greeting"
+type = "command"
+command = "echo 'Hello from herdr-plus'"

@@ -1,0 +1,29 @@
+# Dummy project — a herdr workspace template.
+# Open via the "Herdr Plus: Projects" action.
+
+name = "Example Project"
+description = "A dummy project template"
+working_dir = "~/Development/example"
+
+[[tabs]]
+name = "editor"
+command = "nvim"
+
+[[tabs]]
+name = "git"
+command = "lazygit"
+
+[[tabs]]
+name = "server"
+
+[[tabs.panes]]
+label = "Server"
+command = "npm run dev"
+
+[[tabs.panes]]
+label = "Logs"
+command = "tail -f /var/log/syslog"
+split = "down"
+
+[[tabs]]
+name = "terminal"

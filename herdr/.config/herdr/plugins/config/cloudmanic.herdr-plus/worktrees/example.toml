@@ -1,0 +1,16 @@
+# Dummy worktree layout — applied automatically when herdr creates or opens a
+# worktree whose repo name matches `repo` ("*" matches any repo).
+
+repo = "*"
+# branch = "main"   # optional: narrow to one branch
+
+[[tabs]]
+name = "editor"
+command = "nvim"
+
+[[tabs]]
+name = "git"
+command = "lazygit"
+
+[[tabs]]
+name = "terminal"
