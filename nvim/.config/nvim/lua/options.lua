@@ -26,6 +26,7 @@ vim.api.nvim_create_autocmd("TermOpen", {
 vim.opt.splitbelow = true           -- open new vertical split bottom
 vim.opt.splitright = true           -- open new horizontal splits right
 vim.opt.termguicolors = true        -- enable 24-bit RGB color in the TUI
+vim.opt.guicursor = "n-v-c-sm:block,i-ci-ve:ver25-blinkwait175-blinkoff150-blinkon175,r-cr-o:hor20"
 vim.opt.scrolloff = 8               -- Leave a margin vertically when we scroll
 vim.opt.lazyredraw = false
 
