@@ -22,5 +22,8 @@ fish_variables
 /herdr/.config/herdr/release-notes.json
 /herdr/.config/herdr/*.log
 /herdr/.config/herdr/*.sock
+
+# Yazi
 /yazi/.config/yazi/bookmarks
 /yazi/.config/yazi/gvfs.private
+/yazi/.config/yazi/plugins/
