@@ -21,6 +21,15 @@ edit = [
 	{ run = "code -w %s",       desc = "code (block)", for = "windows", block = true },
 ]
 
+# ─── gvfs.yazi: skip preload in mounted locations (previews enabled) ───
+[[plugin.prepend_preloaders]]
+url = "/run/user/1000/gvfs/**/*"
+run = "noop"
+
+[[plugin.prepend_preloaders]]
+url = "/run/media/lxc/**/*"
+run = "noop"
+
 # Media info previews (image, video, audio metadata below preview)
 [[plugin.prepend_previewers]]
 mime = "image/*"

@@ -2297,6 +2297,7 @@ end
 ---@param enabled boolean?
 local function toggle_automount_when_cd_action(enabled)
 	local hovered_path = get_hovered_path()
+	info("DBG automount-when-cd enabled=%s hovered_path=%s", tostring(enabled), tostring(hovered_path))
 	local is_virtual = (Url(hovered_path).spec and Url(hovered_path).spec.is_virtual)
 		or (not Url(hovered_path).spec and Url(hovered_path).scheme.is_virtual)
 	if is_virtual then
@@ -2518,6 +2519,7 @@ function M:entry(job)
 		end
 	end
 	local action = job.args[1]
+	info("DBG gvfs action=%s", tostring(action))
 	-- Select a device then mount
 	if action == ACTION.SELECT_THEN_MOUNT then
 		local jump = job.args.jump or false

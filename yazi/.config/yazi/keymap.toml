@@ -32,7 +32,156 @@ run = [ "shell -- echo %s | xclip -i -selection clipboard -t text/uri-list", "ya
 on = [ "g", "r" ]
 run = 'shell -- ya emit cd "$(git rev-parse --show-toplevel)"'
 
-# Mount plugin
+# ─── gvfs.yazi keymaps ───
+
+# Mount device and jump to its mount point
 [[mgr.prepend_keymap]]
-on  = "M"
-run = "plugin mount"
+on   = [ "M", "m" ]
+run  = "plugin gvfs -- select-then-mount --jump"
+desc = "Select device to mount and jump to its mount point"
+
+# Remount device under current working directory
+[[mgr.prepend_keymap]]
+on   = [ "M", "R" ]
+run  = "plugin gvfs -- remount-current-cwd-device"
+desc = "Remount device under cwd"
+
+# Unmount device
+[[mgr.prepend_keymap]]
+on   = [ "M", "u" ]
+run  = "plugin gvfs -- select-then-unmount"
+desc = "Select device then unmount"
+
+# Eject hard device (unmounts all partitions and safe to remove)
+[[mgr.prepend_keymap]]
+on   = [ "M", "U" ]
+run  = "plugin gvfs -- select-then-unmount --eject"
+desc = "Select device then eject"
+
+# Force eject/unmount (ignore outstanding file operations)
+[[mgr.prepend_keymap]]
+on   = [ "M", "<C-u>" ]
+run  = "plugin gvfs -- select-then-unmount --eject --force"
+desc = "Select device then force eject/unmount"
+
+# Add a GVFS mount URI (smb://, sftp://, ftp://, etc.)
+[[mgr.prepend_keymap]]
+on   = [ "M", "a" ]
+run  = "plugin gvfs -- add-mount"
+desc = "Add a GVFS mount URI"
+
+# Edit a saved GVFS mount URI
+[[mgr.prepend_keymap]]
+on   = [ "M", "e" ]
+run  = "plugin gvfs -- edit-mount"
+desc = "Edit a GVFS mount URI"
+
+# Remove a saved GVFS mount URI
+[[mgr.prepend_keymap]]
+on   = [ "M", "r" ]
+run  = "plugin gvfs -- remove-mount"
+desc = "Remove a GVFS mount URI"
+
+# Jump to mounted device
+[[mgr.prepend_keymap]]
+on   = [ "g", "m" ]
+run  = "plugin gvfs -- jump-to-device"
+desc = "Select device then jump to its mount point"
+
+# Jump back to previous cwd (before jumping to device)
+[[mgr.prepend_keymap]]
+on   = [ "`", "`" ]
+run  = "plugin gvfs -- jump-back-prev-cwd"
+desc = "Jump back to the position before jumped to device"
+
+# Enable automount when cd-ing into an unmounted device path
+[[mgr.prepend_keymap]]
+on   = [ "M", "t" ]
+run  = "plugin gvfs -- automount-when-cd"
+desc = "Enable automount when cd to device under cwd"
+
+# Disable automount when cd-ing
+[[mgr.prepend_keymap]]
+on   = [ "M", "T" ]
+run  = "plugin gvfs -- automount-when-cd --disabled"
+desc = "Disable automount when cd to device under cwd"
+
+# ─── whoosh.yazi keymaps ───
+
+# Jump to bookmark by key
+[[mgr.prepend_keymap]]
+on  = "["
+run = "plugin whoosh jump_by_key"
+desc = "Jump bookmark by key"
+
+# Direct fuzzy search for bookmarks
+[[mgr.prepend_keymap]]
+on  = "}"
+run = "plugin whoosh jump_by_fzf"
+desc = "Direct fuzzy search for bookmarks"
+
+# Add bookmark (hovered file/directory)
+[[mgr.prepend_keymap]]
+on  = [ "]", "a" ]
+run = "plugin whoosh save"
+desc = "Add bookmark (hovered file/directory)"
+
+# Add bookmark (current directory) — use this for SMB share automount
+[[mgr.prepend_keymap]]
+on  = [ "]", "A" ]
+run = "plugin whoosh save_cwd"
+desc = "Add bookmark (current directory)"
+
+# Add temporary bookmark (hovered file/directory)
+[[mgr.prepend_keymap]]
+on  = [ "]", "t" ]
+run = "plugin whoosh save_temp"
+desc = "Add temporary bookmark (hovered file/directory)"
+
+# Add temporary bookmark (current directory)
+[[mgr.prepend_keymap]]
+on  = [ "]", "T" ]
+run = "plugin whoosh save_cwd_temp"
+desc = "Add temporary bookmark (current directory)"
+
+# Jump directly to bookmark with key k
+[[mgr.prepend_keymap]]
+on  = "<A-k>"
+run = "plugin whoosh jump_key_k"
+desc = "Jump directly to bookmark with key k"
+
+# Jump bookmark by fzf
+[[mgr.prepend_keymap]]
+on  = [ "]", "f" ]
+run = "plugin whoosh jump_by_fzf"
+desc = "Jump bookmark by fzf"
+
+# Delete bookmark by key
+[[mgr.prepend_keymap]]
+on  = [ "]", "d" ]
+run = "plugin whoosh delete_by_key"
+desc = "Delete bookmark by key"
+
+# Delete bookmarks by fzf (TAB to select multiple)
+[[mgr.prepend_keymap]]
+on  = [ "]", "D" ]
+run = "plugin whoosh delete_by_fzf"
+desc = "Delete bookmarks by fzf (TAB to select multiple)"
+
+# Delete all user bookmarks
+[[mgr.prepend_keymap]]
+on  = [ "]", "C" ]
+run = "plugin whoosh delete_all"
+desc = "Delete all user bookmarks"
+
+# Rename bookmark by key
+[[mgr.prepend_keymap]]
+on  = [ "]", "r" ]
+run = "plugin whoosh rename_by_key"
+desc = "Rename bookmark by key"
+
+# Rename bookmark by fzf
+[[mgr.prepend_keymap]]
+on  = [ "]", "R" ]
+run = "plugin whoosh rename_by_fzf"
+desc = "Rename bookmark by fzf"
