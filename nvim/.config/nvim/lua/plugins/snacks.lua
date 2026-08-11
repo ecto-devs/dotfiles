@@ -58,6 +58,7 @@ return {
         },
         files = { hidden = true },
         smart = { hidden = true },
+        explorer = { hidden = true },
       },
     },
     quickfile = { enabled = true },

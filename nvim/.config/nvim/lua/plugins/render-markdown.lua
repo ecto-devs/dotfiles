@@ -6,5 +6,15 @@ return
     -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
     ---@module 'render-markdown'
     ---@type render.md.UserConfig
-    opts = {},
+    opts = {
+        checkbox = {
+            checked = {
+                scope_highlight = 'RenderMarkdownCheckedStrike',
+            },
+        },
+    },
+    config = function(_, opts)
+        vim.api.nvim_set_hl(0, 'RenderMarkdownCheckedStrike', { strikethrough = true, default = true })
+        require('render-markdown').setup(opts)
+    end,
 }
