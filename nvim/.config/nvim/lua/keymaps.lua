@@ -14,8 +14,8 @@ vim.keymap.set('v', '<', '<gv', opts)
 vim.keymap.set('v', '>', '>gv', opts)
 
 -- easier quit/write
-vim.keymap.set('n', '<leader>q', ':q<CR>', opts)
-vim.keymap.set('n', '<leader>Q', ':q!<CR>', opts)
-vim.keymap.set('n', '<leader>w', ':w<CR>', opts)
+vim.keymap.set('n', '<leader>q', ':q<CR>', { desc = "Quit" })
+vim.keymap.set('n', '<leader>Q', ':q!<CR>', { desc = "Quit Without Saving" })
+vim.keymap.set('n', '<leader>w', ':w<CR>', { desc = "Save" })
 
 

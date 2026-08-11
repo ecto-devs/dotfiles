@@ -42,7 +42,7 @@ return {
         { section = "startup" },
       },
     },
-    explorer = { enabled = false },
+    explorer = { enabled = true },
     indent = { enabled = true },
     input = { enabled = true },
     notifier = {
@@ -73,7 +73,6 @@ return {
   },
   keys = {
     --Find files
-    { "<leader>fb", function() Snacks.picker.buffers() end, desc = "Buffers" },
     { "<leader>fg", function() Snacks.picker.grep() end, desc = "Find w/ Grep" },
     { "<leader>fc", function() Snacks.picker.files({ cwd = vim.fn.stdpath("config") }) end, desc = "Find Neovim Config File" },
     { "<leader>ff", function() Snacks.picker.smart() end, desc = "Smart Find Files" },
@@ -90,14 +89,14 @@ return {
     { "<leader>si", function() Snacks.picker.icons() end, desc = "Icons" },
     { "<leader>sk", function() Snacks.picker.keymaps() end, desc = "Keymaps" },
     { "<leader>sM", function() Snacks.picker.man() end, desc = "Man Pages" },
-    {" <leader>sp", function() Snacks.picker.lazy() end, desc = "Search for Plugin Spec" },
+    { "<leader>sp", function() Snacks.picker.lazy() end, desc = "Search for Plugin Spec" },
     { "<leader>su", function() Snacks.picker.undo() end, desc = "Undo History" },
 
     -- Other
+    { "<leader>e", function() Snacks.explorer() end, icon = 󱏒, desc =  "Snacks Explorer"},
     { "<leader>:", function() Snacks.picker.command_history() end, desc = "Command History" },
-    { "<leader>e", function() Snacks.explorer() end, desc = "File Explorer (Sidebar)" },
     { "<leader>z", function() Snacks.zen() end, desc = "Toggle Zen Mode" },
-    { "<leader>.", function() Snacks.scratch() end, desc = "Toggle Scratch Buffer" },
+    { "<leader>bs", function() Snacks.scratch() end, desc = "Scratch Buffer" },
     { "<leader>n", function() Snacks.notifier.show_history() end, desc = "Notification History" },
     { "<leader>bd", function() Snacks.bufdelete() end, desc = "Delete Buffer" },
     { "<leader>R", function() Snacks.rename.rename_file() end, desc = "Rename File" },
@@ -149,8 +148,8 @@ return {
         Snacks.toggle.option("spell", { name = "Spelling" }):map("<leader>os")
         Snacks.toggle.option("wrap", { name = "Wrap" }):map("<leader>ow")
         Snacks.toggle.option("relativenumber", { name = "Relative Number" }):map("<leader>oL")
-        Snacks.toggle.diagnostics():map("<leader>ud")
-        Snacks.toggle.line_number():map("<leader>ul")
+        Snacks.toggle.diagnostics():map("<leader>od")
+        Snacks.toggle.line_number():map("<leader>ol")
         Snacks.toggle.option("conceallevel", { off = 0, on = vim.o.conceallevel > 0 and vim.o.conceallevel or 2 }):map("<leader>oc")
         Snacks.toggle.treesitter():map("<leader>oT")
         Snacks.toggle.inlay_hints():map("<leader>oh")
