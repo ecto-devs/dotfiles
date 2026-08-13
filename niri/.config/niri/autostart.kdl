@@ -4,4 +4,4 @@
 spawn-at-startup "noctalia" "--daemon"
 spawn-sh-at-startup "vicinae server"
 spawn-sh-at-startup "1password --silent"
-spawn-sh-at-startup "tailscale systray"
+spawn-sh-at-startup "pgrep -f \"tailscale systray\" > /dev/null || tailscale systray"
