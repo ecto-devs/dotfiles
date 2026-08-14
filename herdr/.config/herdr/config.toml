@@ -68,6 +68,13 @@ toggle_sidebar = "prefix+e"
  command = "cloudmanic.herdr-plus.quick-actions"
  description = "herdr-plus: quick actions"
 
+# herdr-lazy manage pane
+[[keys.command]]
+key = "prefix+shift+l"
+type = "plugin_action"
+command = "herdr-lazy.manage"
+description = "herdr-lazy: manage plugins"
+
 # herdr-splits.nvim — seamless navigation & resizing
 [[keys.command]]
 key = "ctrl+h"
