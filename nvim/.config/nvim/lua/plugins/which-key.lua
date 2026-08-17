@@ -14,6 +14,7 @@ return {
             { "<leader>s", icon = "", group = "Search" },
             { "<leader>o", icon = "", group = "Options" },
             { "<leader>b", icon = "", group = "Buffers" },
+            { "z", icon = "", group = "Fold" },
 
         })
     end,

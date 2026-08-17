@@ -46,6 +46,14 @@ vim.opt.smartcase = true            -- but make it case sensitive if an uppercas
 vim.opt.autoindent = true
 vim.opt.smartindent = true
 
+-- Folding
+vim.opt.foldmethod = 'expr'
+vim.opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()' -- upgraded to LSP folding per-buffer in plugins/lspconfig.lua when supported
+vim.opt.foldlevel = 99                                -- start with everything open
+vim.opt.foldlevelstart = 99
+vim.opt.foldcolumn = 'auto:1'                         -- clickable fold indicator in the gutter
+vim.opt.fillchars:append({ foldopen = "▾", foldclose = "▸", fold = " ", foldsep = " " })
+
 
 
 
