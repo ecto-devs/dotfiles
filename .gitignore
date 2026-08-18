@@ -29,3 +29,4 @@ fish_variables
 /yazi/.config/yazi/bookmarks
 /yazi/.config/yazi/gvfs.private
 /.claude
+/herdr/.config/herdr/plugins/config/herdr-lazy/bootstrapped
