@@ -30,3 +30,4 @@ fish_variables
 /yazi/.config/yazi/gvfs.private
 /.claude
 /herdr/.config/herdr/plugins/config/herdr-lazy/bootstrapped
+/herdr/.config/herdr/release-notes.json
