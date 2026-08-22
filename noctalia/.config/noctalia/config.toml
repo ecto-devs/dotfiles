@@ -1,5 +1,8 @@
 config_version = 7
 
+[shell]
+polkit_agent = true
+
 [bar.default]
 center = [ "workspaces" ]
 end = [ "tray", "notifications", "clipboard", "network", "bluetooth", "volume", "brightness", "battery" ]
